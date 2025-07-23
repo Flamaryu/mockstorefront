@@ -13,12 +13,16 @@ function Header({ onCartClick }) {
     <header className="bg-amber-50/80 backdrop-blur-md sticky top-0 z-40 border-b border-neutral-200">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-2xl font-black text-neutral-900 tracking-tighter">DUST THEORY</a>
+          {/* This link now correctly points to the homepage */}
+          <a href="/" className="text-2xl font-black text-neutral-900 tracking-tighter">DUST THEORY</a>
+
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <a href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">Latest Drop</a>
+            {/* This link now correctly points to the drop page */}
+            <a href="/drop" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">Latest Drop</a>
             <a href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">Archive</a>
             <a href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">Lookbook</a>
           </div>
+
           <div className="flex items-center space-x-4">
             <a href="#" className="p-2 text-neutral-600 hover:text-neutral-900">
               <UserIcon className="h-6 w-6" />

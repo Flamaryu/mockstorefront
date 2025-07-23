@@ -32,7 +32,6 @@ export default function HomePage() {
   }
 
   return (
-    <CartProvider>
         <div className="font-sans relative">
             <DustBackground />
             <div className="relative z-10">
@@ -45,6 +44,5 @@ export default function HomePage() {
             </div>
             <CartSidebar isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
         </div>
-    </CartProvider>
   );
 }

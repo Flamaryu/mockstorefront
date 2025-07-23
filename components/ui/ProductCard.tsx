@@ -26,11 +26,15 @@ function ProductCard({ product }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="aspect-w-4 aspect-h-5 w-full overflow-hidden rounded-md bg-neutral-200 border-2 border-transparent group-hover:border-orange-500 transition-colors">
+      <div
+        // The background color is now set dynamically from the product data
+        style={{ backgroundColor: product.bgColor }}
+        className="aspect-w-4 aspect-h-5 w-full overflow-hidden rounded-md border-2 border-transparent group-hover:border-orange-500 transition-colors"
+      >
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-full object-contain object-center p-4 transition-transform duration-300 group-hover:scale-105" // Use object-contain and padding
         />
       </div>
       <div className="mt-4 flex justify-between items-start">
